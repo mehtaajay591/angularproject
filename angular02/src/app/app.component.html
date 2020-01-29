@@ -1,8 +1,2 @@
-<form [formGroup]="formss">
-    First Name<input type="text" class="form-control" formControlName="fname" placeholder="First Name">
-    Last Name <input type="text" class="form-control" formControlName="lname" plaaceholder="Last Name">
-    uploader Image <img [src]="image" style="width:'100px' ;height:'100px'"/>
-    Upload Image<input type="file" class="form-control" formControlName="profileImage" (change)="getPhoto($event)">
-    <button class="form-control">Upload</button>
 
-</form>
+<router-outlet></router-outlet>
