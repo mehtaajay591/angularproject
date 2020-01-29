@@ -26,12 +26,14 @@ export class AppComponent {
     console.log(fileName);
     
     reader.readAsDataURL(event.target.files[0]);
-
+    let abc:FileList=null;
+    abc=event.target.files[0]
     reader.onload = (event) => { // called once readAsDataURL is completed
       this.image = reader.result; //add source to image
-      //this.uploadImage.uploadImageToServer(this.image,fileName);
+      
     }
-
+    this.uploadImage.uploadImageToServer(event.target.files[0],fileName).subscribe();
+    
     reader.onerror = function () {
       console.log(reader.error);
     };
