@@ -1,7 +1,7 @@
 export class Profile {
     fname: string;
     lname: string;
-    profileImage: string;
+    imageOriginalName: string;
     status: string;
 
     /* public constructor(init?: Partial<Profile>) {

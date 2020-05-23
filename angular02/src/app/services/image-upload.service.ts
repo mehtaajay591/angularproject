@@ -12,7 +12,7 @@ export class ImageUploadService {
     let imageData = new FormData();
     imageData.append('image', image);
     imageData.append('profileDetails',JSON.stringify(profileDetails))
-    return this.https.post('http://192.168.0.103:8080/savefile', imageData, {
+    return this.https.post('http://localhost:8080/savefile', imageData, {
       reportProgress: true,
       responseType: 'text'
     });

@@ -18,7 +18,7 @@ export class AddProfileComponent implements OnInit {
   profileDetails: FormGroup = new FormGroup({
     fname: new FormControl('', Validators.required),
     lname: new FormControl('', Validators.required),
-    profileImage: new FormControl('', Validators.required),
+    imageOriginalName: new FormControl('', Validators.required),
     status: new FormControl('', Validators.required)
   })
 
