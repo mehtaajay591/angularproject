@@ -1,10 +1,16 @@
-<h1> All Profiles </h1>
-<div class="row">
-    <div class="col-4">
-            <img  class="photo-frame" [src]="image">
-    </div>
-    <div class="col-8 align-center">
-            <div class="row mt-2"> <span>fname lname</span></div>
-            <div class="row"> <span>status</span></div>
-    </div>
+<div class="container">
+        <h1> Gallery </h1>
+        <div class="row">
+                <div class="card col-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-center"> <img class="photo-frame" [src]=""></div>
+                        <div class="card-footer">Footer</div>
+                </div>
+                <div class="card col-3">
+                        <div class="card-body mt-4 text-center">
+                                <i class="fa fa-plus fa-4x top-50 text-center" aria-hidden="true"></i>
+                        </div>
+                </div>
+        </div>
+
 </div>

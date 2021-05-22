@@ -1,25 +1,22 @@
 <div class="container">
-    <h1 class="text-center">My Profile</h1>
+    <h1 class="text-center">Add Photo</h1>
     <form [formGroup]="profileDetails" (ngSubmit)="formSubmitted()">
         <div class="row">
 
-            <label for="fname" class="col-md-4 mt-2">First Name</label>
-            <input id="fname" type="text" class="form-control col-md-8" formControlName="fname"
-                placeholder="First Name">
-            <label for="lname"class="col-md-4 mt-2">Last Name</label>
-            <input id="lname" type="text" class="form-control col-md-8" formControlName="lname"
-                placeholder="Last Name">
+            <label for="title" class="col-md-4 mt-2">Title</label>
+            <input id="title" type="text" class="form-control col-md-8" formControlName="title"
+                placeholder="Title...">
 
             <label for="profile" class="col-md-4 mt-2">Upload Image</label>
             <input id="profile" type="file" class="form-control col-md-8" formControlName="imageOriginalName"
                 (change)="getPhoto($event)">
 
-            <label  for="uploadedPhoto" class="col-md-4 mt-2">Uploaded Photo</label>
+            <label for="uploadedPhoto" class="col-md-4 mt-2">Uploaded Photo</label>
             <div class="pull-left col-md-8 p-0 mt-2">
                 <img id="uploadedPhoto" class="col-md-6 photo-frame p-0" [src]="image">
             </div>
 
-            <label for="status"class="col-md-4 mt-2">What's your status ??</label>
+            <label for="status" class="col-md-4 mt-2">About photo ??</label>
             <textarea id="status" rows="5" class="form-control col-md-8" formControlName="status"
                 placeholder="Write your status here ...."></textarea>
 

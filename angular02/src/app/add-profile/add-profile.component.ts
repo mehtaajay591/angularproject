@@ -16,8 +16,7 @@ export class AddProfileComponent implements OnInit {
   fileName = 'hey';
 
   profileDetails: FormGroup = new FormGroup({
-    fname: new FormControl('', Validators.required),
-    lname: new FormControl('', Validators.required),
+    title: new FormControl('', Validators.required),
     imageOriginalName: new FormControl('', Validators.required),
     status: new FormControl('', Validators.required)
   });
@@ -36,14 +35,12 @@ export class AddProfileComponent implements OnInit {
     reader.onload = (event) => { // called once readAsDataURL is completed
       this.image = reader.result; // add source to image
     };
-    reader.onerror = function() {
+    reader.onerror = function () {
       console.log(reader.error);
     };
   }
 
   formSubmitted() {
-    /*  const fileName=this.profileDetails.value.fname+"_"+event.target.files[0].name+"_"+this.profileDetails.value.lname;
-     console.log(fileName); */
     const profileDetails: Profile = this.profileDetails.value;
     console.log(profileDetails);
     this.uploadImage.uploadProfileDetails(this.selectedFile, this.fileName, profileDetails).subscribe();
