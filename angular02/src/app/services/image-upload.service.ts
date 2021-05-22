@@ -9,13 +9,13 @@ export class ImageUploadService {
   constructor(private https: HttpClient) { }
   uploadProfileDetails(image: File, fileName: string, profileDetails: Profile ) {
 
-    let imageData = new FormData();
+    const imageData = new FormData();
     imageData.append('image', image);
-    imageData.append('profileDetails',JSON.stringify(profileDetails))
+    imageData.append('profileDetails', JSON.stringify(profileDetails));
     return this.https.post('http://localhost:8080/savefile', imageData, {
       reportProgress: true,
       responseType: 'text'
     });
   }
-  
+
 }

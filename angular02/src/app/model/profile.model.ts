@@ -6,7 +6,7 @@ export class Profile {
 
     /* public constructor(init?: Partial<Profile>) {
         console.log(init);
-        
+
         Object.assign(this, init);
     } */
 }

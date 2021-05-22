@@ -5,9 +5,9 @@ import { AddProfileComponent } from './add-profile/add-profile.component';
 
 
 const routes: Routes = [
-  { path: "", redirectTo: "setProfile", pathMatch: "full"},
-  { path: "setProfile", component: AddProfileComponent},
-  { path: "profileList", component: ProfileComponent }
+  { path: '', redirectTo: 'setProfile', pathMatch: 'full'},
+  { path: 'setProfile', component: AddProfileComponent},
+  { path: 'profileList', component: ProfileComponent }
 ];
 
 @NgModule({
